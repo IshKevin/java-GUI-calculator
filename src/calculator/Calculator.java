@@ -1,12 +1,16 @@
 
-package calculator;
+import javax.swing.JFrame;
+
+ 
 
 
 public class Calculator {
 
    
     public static void main(String[] args) {
-        System.out.println("Hello World");
+        JFrame  frame = new JFrame("Calcurtor GUI");
+        frame.setSize(420,420);
+        frame.setVisible(true);
     }
     
 }
