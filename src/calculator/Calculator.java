@@ -1,9 +1,6 @@
+package calculator;
 
 public class Calculator {
-
-    public static void main(String[] args) {
-        System.out.println("progress");
-    }
 
     public static double add(double numbr1, double numbr2) {
         double answer;

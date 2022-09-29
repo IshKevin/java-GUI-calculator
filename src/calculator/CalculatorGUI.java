@@ -6,7 +6,7 @@ package calculator;
 
 /**
  *
- * @author HP
+ * @author kevin
  */
 public class CalculatorGUI extends javax.swing.JFrame {
 
@@ -28,17 +28,17 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        nb1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
-        jToggleButton3 = new javax.swing.JToggleButton();
-        jToggleButton4 = new javax.swing.JToggleButton();
-        jToggleButton5 = new javax.swing.JToggleButton();
-        jToggleButton6 = new javax.swing.JToggleButton();
+        nb2 = new javax.swing.JTextField();
+        plusbutton = new javax.swing.JToggleButton();
+        minusbutton = new javax.swing.JToggleButton();
+        multplay = new javax.swing.JToggleButton();
+        divds = new javax.swing.JToggleButton();
+        clear = new javax.swing.JToggleButton();
+        mods = new javax.swing.JToggleButton();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        answers = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,64 +54,69 @@ public class CalculatorGUI extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 153, 255));
         jLabel3.setText("SECOND NUMBER");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        nb2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                nb2ActionPerformed(evt);
             }
         });
 
-        jToggleButton1.setBackground(new java.awt.Color(0, 153, 204));
-        jToggleButton1.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
-        jToggleButton1.setForeground(new java.awt.Color(102, 102, 102));
-        jToggleButton1.setText("+");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        plusbutton.setBackground(new java.awt.Color(0, 153, 204));
+        plusbutton.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
+        plusbutton.setForeground(new java.awt.Color(102, 102, 102));
+        plusbutton.setText("+");
+        plusbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                plusbuttonActionPerformed(evt);
             }
         });
 
-        jToggleButton2.setBackground(new java.awt.Color(0, 153, 204));
-        jToggleButton2.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
-        jToggleButton2.setForeground(new java.awt.Color(102, 102, 102));
-        jToggleButton2.setText("-");
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        minusbutton.setBackground(new java.awt.Color(0, 153, 204));
+        minusbutton.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
+        minusbutton.setForeground(new java.awt.Color(102, 102, 102));
+        minusbutton.setText("-");
+        minusbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                minusbuttonActionPerformed(evt);
             }
         });
 
-        jToggleButton3.setBackground(new java.awt.Color(0, 153, 204));
-        jToggleButton3.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
-        jToggleButton3.setForeground(new java.awt.Color(102, 102, 102));
-        jToggleButton3.setText("*");
-
-        jToggleButton4.setBackground(new java.awt.Color(0, 153, 204));
-        jToggleButton4.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
-        jToggleButton4.setForeground(new java.awt.Color(102, 102, 102));
-        jToggleButton4.setText("/");
-        jToggleButton4.addActionListener(new java.awt.event.ActionListener() {
+        multplay.setBackground(new java.awt.Color(0, 153, 204));
+        multplay.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
+        multplay.setForeground(new java.awt.Color(102, 102, 102));
+        multplay.setText("*");
+        multplay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton4ActionPerformed(evt);
+                multplayActionPerformed(evt);
             }
         });
 
-        jToggleButton5.setBackground(new java.awt.Color(0, 153, 204));
-        jToggleButton5.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
-        jToggleButton5.setForeground(new java.awt.Color(102, 102, 102));
-        jToggleButton5.setText("=");
-        jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
+        divds.setBackground(new java.awt.Color(0, 153, 204));
+        divds.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
+        divds.setForeground(new java.awt.Color(102, 102, 102));
+        divds.setText("/");
+        divds.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton5ActionPerformed(evt);
+                divdsActionPerformed(evt);
             }
         });
 
-        jToggleButton6.setBackground(new java.awt.Color(0, 153, 204));
-        jToggleButton6.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
-        jToggleButton6.setForeground(new java.awt.Color(102, 102, 102));
-        jToggleButton6.setText("%");
-        jToggleButton6.addActionListener(new java.awt.event.ActionListener() {
+        clear.setBackground(new java.awt.Color(0, 153, 204));
+        clear.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
+        clear.setForeground(new java.awt.Color(102, 102, 102));
+        clear.setText("=");
+        clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton6ActionPerformed(evt);
+                clearActionPerformed(evt);
+            }
+        });
+
+        mods.setBackground(new java.awt.Color(0, 153, 204));
+        mods.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
+        mods.setForeground(new java.awt.Color(102, 102, 102));
+        mods.setText("%");
+        mods.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modsActionPerformed(evt);
             }
         });
 
@@ -119,8 +124,8 @@ public class CalculatorGUI extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(0, 153, 204));
         jLabel4.setText("ANSWER");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 153, 204));
+        answers.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        answers.setForeground(new java.awt.Color(0, 153, 204));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -141,26 +146,25 @@ public class CalculatorGUI extends javax.swing.JFrame {
                                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(26, 26, 26)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField1)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)))
+                                    .addComponent(nb1)
+                                    .addComponent(nb2, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jToggleButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(divds, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(mods, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                                .addComponent(jToggleButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel4)
-                                .addGap(56, 56, 56)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(111, 111, 111))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(answers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(plusbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(minusbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
-                        .addComponent(jToggleButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(multplay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -171,54 +175,113 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nb1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nb2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(plusbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(minusbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(multplay, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(divds, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mods, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(answers, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(36, 36, 36))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void nb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nb2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_nb2ActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    private void plusbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusbuttonActionPerformed
+        try{
+            Calculator c = new Calculator();
+            double n1 = Double.parseDouble(nb1.getText());
+            double n2 = Double.parseDouble(nb2.getText());
+            double ans = c.add(n1,n2);
+             answers.setText(""+ans);
+             
+        }catch(Exception e){
+           answers.setText("invalid result");
+        }
+    }//GEN-LAST:event_plusbuttonActionPerformed
 
-    private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton4ActionPerformed
+    private void divdsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divdsActionPerformed
+         try{
+            Calculator c = new Calculator();
+            double n1 = Double.parseDouble(nb1.getText());
+            double n2 = Double.parseDouble(nb2.getText());
+            double ans = c.divs(n1,n2);
+             answers.setText(""+ans);
+             
+        }catch(Exception e){
+           answers.setText("invalid result");
+        }
+    }//GEN-LAST:event_divdsActionPerformed
 
-    private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton5ActionPerformed
+    private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
+        try{
+            Calculator c = new Calculator();
+            double ans = c.answer();
+             answers.setText(""+ans);
+             
+        }catch(Exception e){
+           answers.setText("invalid result");
+        }
+    }//GEN-LAST:event_clearActionPerformed
 
-    private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton6ActionPerformed
+    private void modsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modsActionPerformed
+         try{
+            Calculator c = new Calculator();
+            double n1 = Double.parseDouble(nb1.getText());
+            double n2 = Double.parseDouble(nb2.getText());
+            double ans = c.mod(n1,n2);
+             answers.setText(""+ans);
+             
+        }catch(Exception e){
+           answers.setText("invalid result");
+        }
+    }//GEN-LAST:event_modsActionPerformed
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
+    private void minusbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusbuttonActionPerformed
+        try{
+            Calculator c = new Calculator();
+            double n1 = Double.parseDouble(nb1.getText());
+            double n2 = Double.parseDouble(nb2.getText());
+            double ans = c.minus(n1,n2);
+             answers.setText(""+ans);
+             
+        }catch(Exception e){
+           answers.setText("invalid result");
+        }
+    }//GEN-LAST:event_minusbuttonActionPerformed
+
+    private void multplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multplayActionPerformed
+        try{
+            Calculator c = new Calculator();
+            double n1 = Double.parseDouble(nb1.getText());
+            double n2 = Double.parseDouble(nb2.getText());
+            double ans = c.multp(n1,n2);
+             answers.setText(""+ans);
+             
+        }catch(Exception e){
+           answers.setText("invalid result");
+        }
+    }//GEN-LAST:event_multplayActionPerformed
 
     /**
      * @param args the command line arguments
@@ -256,18 +319,18 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel answers;
+    private javax.swing.JToggleButton clear;
+    private javax.swing.JToggleButton divds;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton3;
-    private javax.swing.JToggleButton jToggleButton4;
-    private javax.swing.JToggleButton jToggleButton5;
-    private javax.swing.JToggleButton jToggleButton6;
+    private javax.swing.JToggleButton minusbutton;
+    private javax.swing.JToggleButton mods;
+    private javax.swing.JToggleButton multplay;
+    private javax.swing.JTextField nb1;
+    private javax.swing.JTextField nb2;
+    private javax.swing.JToggleButton plusbutton;
     // End of variables declaration//GEN-END:variables
 }
