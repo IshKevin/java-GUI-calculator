@@ -1,16 +1,43 @@
 
-import javax.swing.JFrame;
-
- 
-
-
 public class Calculator {
 
-   
     public static void main(String[] args) {
-        JFrame  frame = new JFrame("Calcurtor GUI");
-        frame.setSize(420,420);
-        frame.setVisible(true);
+        System.out.println("progress");
     }
-    
+
+    public static double add(double numbr1, double numbr2) {
+        double answer;
+        answer = numbr1 + numbr2;
+        return answer;
+    }
+
+    public static double minus(double numbr1, double numbr2) {
+        double answer;
+        answer = numbr1 - numbr2;
+        return answer;
+    }
+
+    public static double multp(double numbr1, double numbr2) {
+        double answer;
+        answer = numbr1 * numbr2;
+        return answer;
+    }
+
+    public static double divs(double numbr1, double numbr2) {
+        double answer;
+        answer = numbr1 / numbr2;
+        return answer;
+    }
+
+    public static double mod(double numbr1, double numbr2) {
+        double answer;
+        answer = numbr1 % numbr2;
+        return answer;
+    }
+
+    public static double answer() {
+
+        return 0;
+    }
+
 }

@@ -108,7 +108,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         jToggleButton6.setBackground(new java.awt.Color(0, 153, 204));
         jToggleButton6.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jToggleButton6.setForeground(new java.awt.Color(102, 102, 102));
-        jToggleButton6.setText("P");
+        jToggleButton6.setText("%");
         jToggleButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton6ActionPerformed(evt);
